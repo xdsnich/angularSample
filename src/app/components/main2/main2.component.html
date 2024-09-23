@@ -1,0 +1,50 @@
+<div class="body">
+    
+    @if(bigBlocks > 0){
+        <div class="main2-bigBlocks">
+            @for (item of getBlocksArray(bigBlocks); track $index) {
+                <div class="main2-bigBlock">
+                    bigBlock
+                </div>
+            }
+        </div>
+        <div class="medium-Blocks">
+            <div *ngFor="let item of getBlocksArray(mediumBlocks);" class="medium-Block">
+                mediumBlock
+            </div>
+        </div>
+    }
+
+    <div  class="input-block">
+        <input class="input-block__element" [(ngModel)]=" text" [ngModel]="text | cutText:buttonIsPressed" placeholder="enter ur thinking bout...">
+        
+        <div>
+            <button class="input-block__element1" (click)="buttonIsPressed=!buttonIsPressed">Delete</button>
+        </div>
+    </div>
+
+    @if(toggler){
+        <div class="last-block">
+            <div class="last-block__element">
+                <div class="element1">
+                    Are You Ready to kickstart your project?
+                </div>
+                <div class="element2">
+                    Reach out and let's make it happen ✨. I'm also available for full-time or Part-time opportunities to push <br>
+                    the boundaries of design and deliver exceptional work.
+                </div>
+                <div class="element3">
+                    <button class="element3-button">
+                        Let's Talk
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        <button (click)="showComponent()">click</button>
+    </div>
+    
+</div>
+

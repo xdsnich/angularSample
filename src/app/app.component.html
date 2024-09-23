@@ -1,0 +1,13 @@
+<body>
+  <header appCustomDirective>
+    <app-head-component>
+    </app-head-component>
+  </header>
+  <main>
+    <app-main-component (toggle)="togglerUpdater($event)">
+    </app-main-component>
+    <app-main2 [bigBlocks]="5" [mediumBlocks]="4" [toggler]="toggler">
+
+    </app-main2>
+  </main>
+</body>
