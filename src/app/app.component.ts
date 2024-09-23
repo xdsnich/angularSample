@@ -15,7 +15,7 @@ export class AppComponent {
 
   
 
-  title = 'sampleAngularSite';
+  title = 'angular Sample';
   toggler:boolean = false;
 
   togglerUpdater(newToggler: boolean){
